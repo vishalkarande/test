@@ -1,0 +1,292 @@
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1
+$ git init
+Initialized empty Git repository in F:/appet/office project/git/task1/.git/
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.png
+        new.txt
+        second.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git add -m
+error: unknown switch `m'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.png
+        new.txt
+        second.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in new.txt.
+The file will have its original line endings in your working directory
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.png
+        new file:   new.txt
+        new file:   second.png
+
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.png
+        new file:   new.txt
+        new file:   second.png
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   new.txt
+
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git diff
+warning: LF will be replaced by CRLF in new.txt.
+The file will have its original line endings in your working directory
+diff --git a/new.txt b/new.txt
+index c923153..64c2751 100644
+--- a/new.txt
++++ b/new.txt
+@@ -1,2 +1,4 @@
+ This is my first test git task.
+ this file has new text inserted after screen shot "first".
++changes has been made
++
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in new.txt.
+The file will have its original line endings in your working directory
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.png
+        new file:   new.txt
+        new file:   second.png
+
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git diff
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git commit
+hint: Waiting for your editor to close the file...
+[main 2021-05-15T05:36:55.270Z] update#setState idle
+        [main 2021-05-15T05:37:25.284Z] update#setState checking for updates
+[main 2021-05-15T05:37:25.299Z] Error: net::ERR_NAME_NOT_RESOLVED
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:109:7029)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[main 2021-05-15T05:37:25.302Z] update#setState idle
+Aborting commit due to empty commit message.
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ ^Cgit ad
+
+bash: it: command not found
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ ^C
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git commit -v
+hint: Waiting for your editor to close the file...
+[main 2021-05-15T05:39:29.289Z] update#setState idle
+[main 2021-05-15T05:39:59.301Z] update#setState checking for updates
+[main 2021-05-15T05:39:59.377Z] update#setState downloading
+[master (root-commit) 8ef4413] This is first commit
+ 3 files changed, 4 insertions(+)
+ create mode 100644 first.png
+ create mode 100644 new.txt
+ create mode 100644 second.png
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git commit -m "Joker First commit"
+On branch master
+nothing to commit, working tree clean
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git commit -m "Joker First commit" master
+error: pathspec 'master' did not match any file(s) known to git
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git commit -m "Joker First commit" master/origin
+error: pathspec 'master/origin' did not match any file(s) known to git
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git branch second
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git log
+commit 8ef4413a6e6beb047f5cfd7ce29fdd551426bf15 (HEAD -> master, second)
+Author: vishalkarande <vishalkarande6@gmail.com>
+Date:   Sat May 15 11:09:28 2021 +0530
+
+    This is first commit
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git checkout second
+Switched to branch 'second'
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (second)
+$ git add .
+warning: LF will be replaced by CRLF in new.txt.
+The file will have its original line endings in your working directory
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (second)
+$ git commit -v
+hint: Waiting for your editor to close the file...
+[main 2021-05-15T06:18:31.017Z] update#setState idle
+[second 8c12ba9] Seccond commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (second)
+$ git checkout -b
+error: switch `b' requires a value
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (second)
+$ git checkout -b bug-fix
+Switched to a new branch 'bug-fix'
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (bug-fix)
+$ git branch
+* bug-fix
+  master
+  second
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (bug-fix)
+$ git checkout master
+Switched to branch 'master'
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git merge bug-fix
+Updating 8ef4413..8c12ba9
+Fast-forward
+ new.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git log
+commit 8c12ba9601ddc70d79ffc3247821e74e3c12344c (HEAD -> master, second, bug-fix)
+Author: vishalkarande <vishalkarande6@gmail.com>
+Date:   Sat May 15 11:48:30 2021 +0530
+
+    Seccond commit
+
+commit 8ef4413a6e6beb047f5cfd7ce29fdd551426bf15
+Author: vishalkarande <vishalkarande6@gmail.com>
+Date:   Sat May 15 11:09:28 2021 +0530
+
+    This is first commit
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$ git merge second
+Already up to date.
+
+dell@CLOWN-2022 MINGW64 /f/appet/office project/git/task1 (master)
+$
